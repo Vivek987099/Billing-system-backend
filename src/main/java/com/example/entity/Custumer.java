@@ -1,0 +1,66 @@
+package com.example.entity;
+
+import java.util.List;
+
+import jakarta.persistence.OneToMany;
+
+public class Custumer {
+	
+	private Integer id;
+	private String customerId;
+	private String cusName;
+	private String email;
+	
+	@OneToMany(mappedBy = "customer")
+	private List<Bill> bills;
+	
+	
+	public Custumer() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Custumer(Integer id, String customerId, String cusName, String email, List<Bill> bills) {
+		super();
+		this.id = id;
+		this.customerId = customerId;
+		this.cusName = cusName;
+		this.email = email;
+		this.bills = bills;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	public String getCustomerId() {
+		return customerId;
+	}
+	public void setCustomerId(String customerId) {
+		this.customerId = customerId;
+	}
+	public String getCusName() {
+		return cusName;
+	}
+	public void setCusName(String cusName) {
+		this.cusName = cusName;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public List<Bill> getBills() {
+		return bills;
+	}
+
+	public void setBills(List<Bill> bills) {
+		this.bills = bills;
+	}
+	
+
+}
