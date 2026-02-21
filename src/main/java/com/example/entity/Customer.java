@@ -33,6 +33,11 @@ public class Customer {
 		this.email = email;
 		this.bills = bills;
 	}
+	public Customer( String cusName, String email) {
+		super();
+		this.cusName = cusName;
+		this.email = email;
+	}
 
 	public Integer getId() {
 		return id;
