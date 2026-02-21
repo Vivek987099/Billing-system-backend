@@ -6,7 +6,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class HService {
+public class HServiceItem {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -14,11 +14,11 @@ public class HService {
 	private String description;
 	private Double price;
 
-	public HService() {
+	public HServiceItem() {
 		super();
 	}
 
-	public HService(Long id, String name, String description, Double price) {
+	public HServiceItem(Long id, String name, String description, Double price) {
 		this.id = id;
 		this.name = name;
 		this.description = description;

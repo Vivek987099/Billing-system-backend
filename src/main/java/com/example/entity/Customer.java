@@ -9,7 +9,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 
 @Entity
-public class Custumer {
+public class Customer {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
@@ -20,12 +20,12 @@ public class Custumer {
 	@OneToMany(mappedBy = "custumer")
 	private List<Bill> bills;
 
-	public Custumer() {
+	public Customer() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Custumer(Integer id, String customerId, String cusName, String email, List<Bill> bills) {
+	public Customer(Integer id, String customerId, String cusName, String email, List<Bill> bills) {
 		super();
 		this.id = id;
 		this.customerId = customerId;

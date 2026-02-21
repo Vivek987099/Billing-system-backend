@@ -10,7 +10,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 
 @Entity
-public class BillService {
+public class BillServiceItem {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -23,14 +23,14 @@ public class BillService {
 
 	@ManyToOne
 	@JoinColumn(name = "service_id")
-	private List<HService> hServices;
+	private List<HServiceItem> hServices;
 
-	public BillService() {
+	public BillServiceItem() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public BillService(Long id, Integer qty, Double price, Double total) {
+	public BillServiceItem(Long id, Integer qty, Double price, Double total) {
 		super();
 		this.id = id;
 		this.qty = qty;

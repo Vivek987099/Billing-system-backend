@@ -20,17 +20,17 @@ public class Bill {
     private String billNo;
     private Double totalAmount;
     @OneToMany(mappedBy = "bill", cascade = CascadeType.ALL)
-    private List<BillService> billServices;
+    private List<BillServiceItem> billServices;
     
     @ManyToOne
     @JoinColumn(name = "customer_id")
-    private Custumer custumer;
+    private Customer custumer;
 	public Bill() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Bill(Long id, String billNo, Double totalAmount, Custumer custumer) {
+	public Bill(Long id, String billNo, Double totalAmount, Customer custumer) {
 		super();
 		this.id = id;
 		this.billNo = billNo;
@@ -57,11 +57,11 @@ public class Bill {
 		this.totalAmount = totalAmount;
 	}
 
-	public Custumer getCustumer() {
+	public Customer getCustumer() {
 		return custumer;
 	}
 
-	public void setCustumer(Custumer custumer) {
+	public void setCustumer(Customer custumer) {
 		this.custumer = custumer;
 	}
     
